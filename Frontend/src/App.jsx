@@ -70,6 +70,8 @@ import prism from "prismjs";
 import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import "highlight.js/styles/github-dark.css";
+import "prismjs/components/prism-javascript";
+
 import axios from "axios";
 import "./App.css";
 
