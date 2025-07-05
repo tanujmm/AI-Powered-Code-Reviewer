@@ -63,3 +63,37 @@ main .right {
   font-size: 1.5rem;
   overflow: auto;
 }
+main .right {
+  background-color: #2c2c2c; /* dark gray for better contrast */
+  color: white; /* ensure text is visible */
+  padding: 1rem 2rem;
+  overflow-y: auto;
+}
+
+main .right h1,
+main .right h2,
+main .right p,
+main .right li,
+main .right code,
+main .right pre {
+  color: white;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+main .right ul {
+  padding-left: 1.2rem;
+  list-style-type: disc;
+}
+
+main .right pre {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.markdown-body {
+  color: white;
+  font-family: 'Fira Code', monospace;
+}

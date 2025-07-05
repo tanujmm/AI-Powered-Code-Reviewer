@@ -120,7 +120,7 @@ function App() {
             Review
           </div>
         </div>
-        <div className="right">
+        <div className="right markdown-body">
           <Markdown rehypePlugins={[rehypeHighlight]}>
             {review.response}
           </Markdown>
