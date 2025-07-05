@@ -122,8 +122,8 @@ function App() {
           </div> */}
           <div
             className="review"
-            onClick={loading ? null : sendCode}
-            onTouchStart={loading ? null : sendCode}
+            onClick={loading ? null : setCode}
+            onTouchStart={loading ? null : setCode}
           >
             {loading ? "Reviewing..." : "Review"}
           </div>
