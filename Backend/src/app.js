@@ -21,7 +21,7 @@ const aiRoutes = require("./routes/ai.routes.js");
 const app = express();
 
 const allowedOrigins = [
-  "https://ai-powered-code-reviewer-frontend-tle8.onrender.com",
+  "https://ai-powered-code-reviewer-frontend2.onrender.com",
 ];
 
 app.use(
