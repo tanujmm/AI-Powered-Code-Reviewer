@@ -79,11 +79,22 @@ const model = genAI.getGenerativeModel({
 `,
 });
 
+// async function generateContent(code) {
+//   if (!code) throw new Error("Prompt is required");
+
+//   const result = await model.generateContent(code);
+//   return result.response.text();
+// }
 async function generateContent(code) {
   if (!code) throw new Error("Prompt is required");
 
-  const result = await model.generateContent(code);
-  return result.response.text();
+  try {
+    const result = await model.generateContent(code);
+    return result.response.text();
+  } catch (error) {
+    console.error("Gemini API Error:", error); // Log full error
+    throw error;
+  }
 }
 
 module.exports = generateContent;
