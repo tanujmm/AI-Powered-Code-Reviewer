@@ -86,6 +86,7 @@ const model = genAI.getGenerativeModel({
 //   return result.response.text();
 // }
 async function generateContent(code) {
+  console.log("API KEY:", process.env.GOOGLE_GEMINI_KEY);
   if (!code) throw new Error("Prompt is required");
 
   try {
