@@ -94,7 +94,7 @@ function App() {
     setLoading(true);
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_BACKEND_URL}/ai/get-review`,
+        `${import.meta.env.VITE_BACKEND_URL}/get-review`,
         {
           code,
         }
