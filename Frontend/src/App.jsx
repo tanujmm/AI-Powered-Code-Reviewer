@@ -88,12 +88,13 @@ function App() {
   }, []);
 
   async function reviewCode() {
+    // setLoading(true);
     const response = await axios.post("http://localhost:3000/ai/get-review", {
       code,
     });
     setReview(response.data);
   }
-
+  const [loading, setLoading] = useState(false);
   return (
     <>
       <main>
@@ -116,8 +117,15 @@ function App() {
               }}
             />
           </div>
-          <div onClick={reviewCode} className="review">
+          {/* <div onClick={reviewCode} className="review">
             Review
+          </div> */}
+          <div
+            className="review"
+            onClick={loading ? null : sendCode}
+            onTouchStart={loading ? null : sendCode}
+          >
+            {loading ? "Reviewing..." : "Review"}
           </div>
         </div>
         <div className="right markdown-body">
