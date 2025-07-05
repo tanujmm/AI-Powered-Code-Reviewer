@@ -1,5 +1,6 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 require("dotenv").config();
+console.log("API KEY:", process.env.GOOGLE_GEMINI_KEY);
 
 const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_KEY);
 const model = genAI.getGenerativeModel({
@@ -86,7 +87,6 @@ const model = genAI.getGenerativeModel({
 //   return result.response.text();
 // }
 async function generateContent(code) {
-  console.log("API KEY:", process.env.GOOGLE_GEMINI_KEY);
   if (!code) throw new Error("Prompt is required");
 
   try {

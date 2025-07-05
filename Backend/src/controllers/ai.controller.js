@@ -1,7 +1,7 @@
 const aiService = require("../services/ai.service.js");
 
 module.exports.getReview = async (req, res) => {
-  const { code } = req.body;
+  const { code } = req.body.code;
 
   // Input validation
   if (!code || typeof code !== "string" || code.trim() === "") {
